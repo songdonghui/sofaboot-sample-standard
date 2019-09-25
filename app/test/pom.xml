@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.alipay.sofa</groupId>
+        <artifactId>sofaboot-sample-standard</artifactId>
+        <version>3.2.0</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <main.user.dir>${basedir}/../../../../..</main.user.dir>
+    </properties>
+
+    <artifactId>sofaboot-sample-standard-test</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofaboot-sample-standard-web</artifactId>
+        </dependency>
+
+        <!-- test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- spring dependencies end -->
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mudebug</groupId>
+                <artifactId>prapr-plugin</artifactId>
+                <version>2.0.0</version>
+                <configuration>
+                    <threads> 2 </threads>
+                    <mutators>
+                        <!-- <mutator>ALL</mutator> ACTIVATES ALL THE AVAILABLE MUTATORS -->
+                        <!-- OR YOU CAN SELECTIVELY ACTIVATE THE MUTATORS BY LISTING THEIR IDENTIFIERS HERE -->
+                        <!-- <mutator>PIT</mutator> ACTIVATES TRADITIONAL MUTATORS -->
+                        <!-- <mutator>PRAPR</mutator> ACTIVATES ALL THE MUTATORS SPECIFIC TO PRAPR -->
+                    </mutators>
+                    <outputFormats>
+                        <!-- YOU CAN DETERMINE FORMAT OF THE FIX REPORT HERE -->
+                        <!-- <param>COMPRESSED-XML</param> SUITABLE FOR POST PROCESSING -->
+                        <!-- <param>LOG</param> HUMAN READABLE RANKED LIST -->
+                        <!-- <param>HTML</param> HUMAN READABLE VISUALIZED REPORT -->
+                    </outputFormats>
+                    <testPlugin>
+                        <!-- COULD BE "junit" (default), "testng", or "junit5" -->
+                    </testPlugin>
+                    <!-- ET CETERA -->
+                </configuration>
+                <!-- IN CASE YOU DECIDED TO USE JUNIT 5, AFTER SETTING THE VALUE OF testPlugin TO "junit5" -->
+                <!-- YOU WILL NEED TO ADD THE FOLLOWING DEPENDENCY INFORMATION HERE -->
+                <!-- <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>0.4</version>
+                    </dependency>
+                </dependencies> -->
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
