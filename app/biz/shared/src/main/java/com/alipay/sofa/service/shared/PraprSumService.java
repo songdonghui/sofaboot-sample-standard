@@ -18,10 +18,10 @@ package com.alipay.sofa.service.shared;
 
 import java.util.List;
 
-public class ParprSumService {
+public class PraprSumService {
     public int sum(List<Integer> list) {
         int sum = 0;
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); ++i) {
             sum += list.get(i);
         }
         return sum;

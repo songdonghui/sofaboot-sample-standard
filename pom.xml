@@ -75,7 +75,6 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -83,7 +82,7 @@
                 <artifactId>prapr-plugin</artifactId>
                 <version>2.0.0</version>
                 <configuration>
-                    <threads> 2 </threads>
+                    <threads> <!-- NUMBER OF THREADS TO BE USED DURING MUTATION --> </threads>
                     <mutators>
                         <!-- <mutator>ALL</mutator> ACTIVATES ALL THE AVAILABLE MUTATORS -->
                         <!-- OR YOU CAN SELECTIVELY ACTIVATE THE MUTATORS BY LISTING THEIR IDENTIFIERS HERE -->
@@ -113,5 +112,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

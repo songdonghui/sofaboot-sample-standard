@@ -16,22 +16,19 @@
  */
 package com.alipay.sofa.test.junit;
 
-import com.alipay.sofa.service.shared.ParprSumService;
+import com.alipay.sofa.service.shared.PraprSumService;
 import com.alipay.sofa.test.base.AbstractTestBase;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class SumTest extends AbstractTestBase {
-
     @Test
     public void testSum() {
-        ParprSumService parprSumService = new ParprSumService();
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
-
-        Assert.assertNotNull(parprSumService.sum(list));
+        PraprSumService praprSumService = new PraprSumService();
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+        Assert.assertNotNull(praprSumService.sum(list));
     }
 }
