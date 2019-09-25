@@ -30,5 +30,41 @@
         <!-- spring dependencies end -->
 
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mudebug</groupId>
+                <artifactId>prapr-plugin</artifactId>
+                <version>2.0.0</version>
+                <configuration>
+                    <threads>2 </threads>
+                    <mutators>
+                        <!-- <mutator>ALL</mutator> ACTIVATES ALL THE AVAILABLE MUTATORS -->
+                        <!-- OR YOU CAN SELECTIVELY ACTIVATE THE MUTATORS BY LISTING THEIR IDENTIFIERS HERE -->
+                        <!-- <mutator>PIT</mutator> ACTIVATES TRADITIONAL MUTATORS -->
+                        <!-- <mutator>PRAPR</mutator> ACTIVATES ALL THE MUTATORS SPECIFIC TO PRAPR -->
+                    </mutators>
+                    <outputFormats>
+                        <!-- YOU CAN DETERMINE FORMAT OF THE FIX REPORT HERE -->
+                        <!-- <param>COMPRESSED-XML</param> SUITABLE FOR POST PROCESSING -->
+                        <!-- <param>LOG</param> HUMAN READABLE RANKED LIST -->
+                        <!-- <param>HTML</param> HUMAN READABLE VISUALIZED REPORT -->
+                    </outputFormats>
+                    <testPlugin>
+                        <!-- COULD BE "junit" (default), "testng", or "junit5" -->
+                    </testPlugin>
+                    <!-- ET CETERA -->
+                </configuration>
+                <!-- IN CASE YOU DECIDED TO USE JUNIT 5, AFTER SETTING THE VALUE OF testPlugin TO "junit5" -->
+                <!-- YOU WILL NEED TO ADD THE FOLLOWING DEPENDENCY INFORMATION HERE -->
+                <!-- <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>0.4</version>
+                    </dependency>
+                </dependencies> -->
+            </plugin>
+        </plugins>
+    </build>
 </project>

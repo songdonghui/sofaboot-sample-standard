@@ -12,3 +12,17 @@
 2019-09-25 22:52:05,613 INFO  main                             - Begin ReadinessCheckCallback readiness check
 2019-09-25 22:52:05,613 INFO  main                             - ReadinessCheckCallback readiness check result: success.
 2019-09-25 22:52:05,613 INFO  main                             - Readiness check result: success
+2019-09-25 23:06:29,473 INFO  main                             - Found 2 HealthChecker implementation:sofaModuleHealthChecker,sofaComponentHealthChecker
+2019-09-25 23:06:29,476 INFO  main                             - Found 4 HealthIndicator implementation:sofaModuleHealthIndicator,sofaBootHealthIndicator,sofaComponentHealthIndicator,diskSpaceHealthIndicator
+2019-09-25 23:06:29,477 INFO  main                             - Found 0 ReadinessCheckCallback implementation: 
+2019-09-25 23:06:29,478 INFO  main                             - Begin SOFABoot HealthChecker readiness check.
+2019-09-25 23:06:29,481 INFO  main                             - HealthChecker[sofaModuleHealthChecker] readiness check success with 0 retry.
+2019-09-25 23:06:29,486 INFO  main                             - HealthChecker[sofaComponentHealthChecker] readiness check success with 0 retry.
+2019-09-25 23:06:29,486 INFO  main                             - SOFABoot HealthChecker readiness check result: success.
+2019-09-25 23:06:29,486 INFO  main                             - Begin SOFABoot HealthIndicator readiness check.
+2019-09-25 23:06:29,488 INFO  main                             - HealthIndicator[sofaModuleHealthIndicator] readiness check success.
+2019-09-25 23:06:29,494 INFO  main                             - HealthIndicator[diskSpaceHealthIndicator] readiness check success.
+2019-09-25 23:06:29,494 INFO  main                             - SOFABoot HealthIndicator readiness check result: success.
+2019-09-25 23:06:29,494 INFO  main                             - Begin ReadinessCheckCallback readiness check
+2019-09-25 23:06:29,495 INFO  main                             - ReadinessCheckCallback readiness check result: success.
+2019-09-25 23:06:29,495 INFO  main                             - Readiness check result: success
